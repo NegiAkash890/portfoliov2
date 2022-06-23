@@ -13,24 +13,27 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import NavBar from "../components/NavBar";
+
 function about() {
   return (
     <>
      
       <Box
         alignItems="center"
-        display="flex"
-        justifyContent="space-between"
+        display={{sm: "block", base:"block", md:"flex"}}
+        p={["4","4","10"]}
+        justifyContent="center"
         maxW={1000}
-        my={10}
+        my={["10","10","60"]}
         mx="auto"
+        width={"100%"}
+        
         
       >
-        <Image src="https://fakeimg.pl/420x440/" width={420} height={440} />
-        <Box ml={4}>
-          <Heading fontSize="80px">Hi there !</Heading>
-          <Text fontSize="25px" fontWeight="light">
+        <Image src="https://fakeimg.pl/420x440/" width={420} height={440} objectFit="contain" alt="profile-image"/>
+        <Box ml={[1, 2, 4]} mt={[5, 0, 0]}>
+          <Heading fontSize={["3rem", "3rem","5rem"]}>Hi there !</Heading>
+          <Text fontSize={["1rem", "1.5rem", "1.5rem"]} fontWeight="light" display={"block"} width="100%">
             Fuelled by a passion for designing compelling products, I have a
             deep desire to excel and continuously improve in my work. Learn more
             about my journey below.
@@ -39,22 +42,24 @@ function about() {
       </Box>
       <Box
         alignItems="center"
-        display="flex"
-        justifyContent="space-between"
+        display={{sm: "block", base:"block", md:"flex"}}
+        p={["4","4","10"]}
+        justifyContent="center"
         maxW={1000}
-        my={200}
+        my={["10","10","60"]}
         mx="auto"
+        width={"100%"}
       >
-        <Box display="flex" justifyContent="space-between">
+        <Box  display={{sm: "block", base:"block", md:"flex"}} p={[2,3,4]} justifyContent="space-between">
           <Box>
             <Heading mb={4}>My Career so far</Heading>
-            <Text fontSize="20px" fontWeight="light">
+            <Text fontSize={["1rem", "1.5rem", "1.5rem"]}  fontWeight="light">
               Always up for new challenges, I have experience working as an
               developer for growing startups. I have projects from scratch and
               have driven projects to there successfully completion
             </Text>
           </Box>
-          <Box mt={10} ml={5} minW="400px">
+          <Box mt={10} ml={[0, 5, 5]} minW="400px">
             <Flex gap={3} wrap="wrap">
               <Badge
                 _hover={{
@@ -130,22 +135,30 @@ function about() {
           </Box>
         </Box>
       </Box>
-      <Box maxW={1000} my={10} mx="auto">
+      <Box  
+        alignItems="center"
+        // display={{sm: "block", base:"block", md:"flex"}}
+        p={["4","4","10"]}
+        justifyContent="center"
+        maxW={1000}
+        my={["10","10","50"]}
+        mx="auto"
+        width={"100%"}>
         <Heading mb={4}>Impression Made</Heading>
-        <Flex gap={10} mt={10} alignItems="center" justifyContent="center">
-        <Box mt={10} minW="300">
+        <Box gap={10} mt={10} display={{sm: "block", base:"block", md:"flex"}} alignItems="center" justifyContent="center" wrap={"wrap"}>
+        <Box mt={10} minW="300"  display={{sm: "flex", base:"flex", md:"block"}}>
           <Image src="https://fakeimg.pl/150x150/" borderRadius={"100px"} />
           <Box ml={3} mt={4} lineHeight="1.5">
             <Text fontWeight="medium" fontSize="1.5rem">
               Dia Mirza
             </Text>
-            <Text fontWeight={"thin"} fontSize="1rem">
+            <Text fontWeight={"thin"} fontSize={["0.8rem","1rem","1rem"]}>
               Software Developer @ Microsoft
             </Text>
           </Box>
         </Box>
         <Box>
-          <Text fontSize={"20px"}>
+          <Text mt={["10","0","0"]} fontSize={["0.8rem","1rem","1rem"]}>
             "Sebastian is a guru at all things UX design, consistently producing
             intuitive, modern, and bold designs. He is a natural problem solver
             in the design space so everyone went to him if they were stuck on a
@@ -156,9 +169,9 @@ function about() {
             designs... Any business would be lucky to have him."
           </Text>
         </Box>
-        </Flex>
+        </Box>
       </Box>
-      <Button float={'right'} variant={'outline'} bg='black' color={'white'} borderRadius='none' mb={10}>Work</Button>
+      <Button mr={["2","0","0"]} float={'right'} variant={'outline'} bg='black' color={'white'} borderRadius='none' mb={10}>Work</Button>
     </>
   );
 }
