@@ -54,6 +54,7 @@ function about() {
           <Box>
             <Heading mb={4}>My Career so far</Heading>
             <Text fontSize={["1rem", "1.5rem", "1.5rem"]}  fontWeight="light">
+              Currently working on my @skills and looking for opportunities to @learn
               Always up for new challenges, I have experience working as an
               developer for growing startups. I have projects from scratch and
               have driven projects to there successfully completion
@@ -171,7 +172,7 @@ function about() {
         </Box>
         </Box>
       </Box>
-      <Button mr={["2","0","0"]} float={'right'} variant={'outline'} bg='black' color={'white'} borderRadius='none' mb={10}>Work</Button>
+      <Button mr={["2","0","0"]} float={'right'} variant={'outline'} bg='black' color={'white'} px={10} py={5} borderRadius='none' mb={10}>Work</Button>
     </>
   );
 }

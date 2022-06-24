@@ -1,8 +1,17 @@
+import { Box } from '@chakra-ui/react'
 import React from 'react'
+import Layout from '../components/layout'
+
 
 function contact() {
   return (
-    <div>contact</div>
+    <Layout>
+
+    <Box  maxW={1000} my={10} mx="auto">
+
+      Contact
+    </Box>
+    </Layout>
   )
 }
 
