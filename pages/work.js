@@ -6,7 +6,25 @@ import Timeline from "../components/timeline";
 function Work() {
   const [cardState, setCardState] = useState([false, false]);
   const [activeIndex ,setActiveIndex] = useState(0);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([
+    {
+      date : "2018",
+      content: "Cleared senior secondary education and joined NSUT East Campus, to pursue B.Tech in Electronics and Communication Engineering"
+    },
+    {
+      date : "12-01-2022",
+      content: "2- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      date : "13-01-2022",
+      content: "3- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      date : "14-01-2022",
+      content: "4- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    
+  ]);
   const toggleState = (id) => {
     const newCardState = [...cardState];
     newCardState[id] = !cardState[id];
@@ -27,13 +45,13 @@ function Work() {
         >
           or Software Developer
         </Text>
-        <Timeline activeIndex={activeIndex} data={data}/>
+        <Timeline activeIndex={activeIndex} data={data} setActiveIndex={setActiveIndex}/>
         <Button
           variant={"solid"}
           bg="black"
           color={"white"}
           borderRadius="none"
-          mt={"4"}
+          mt={"20"}
           w="100%"
           width={{ base: "100%", md: "30%" }}
         >
