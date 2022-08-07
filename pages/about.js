@@ -30,7 +30,7 @@ function about() {
         
         
       >
-        <Image src="https://fakeimg.pl/420x440/" width={420} height={440} objectFit="contain" alt="profile-image"/>
+        <Image src="https://fakeimg.pl/420x440/" width={420} height={440} objectFit="contain" alt="profile-image" mr={20}/>
         <Box ml={[1, 2, 4]} mt={[5, 0, 0]}>
           <Heading fontSize={["3rem", "3rem","5rem"]}>Hi there !</Heading>
           <Text fontSize={["1rem", "1.5rem", "1.5rem"]} fontWeight="light" display={"block"} width="100%">

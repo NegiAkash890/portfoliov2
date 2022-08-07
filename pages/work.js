@@ -1,9 +1,12 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Layout from "../components/layout";
+import Timeline from "../components/timeline";
 
 function Work() {
   const [cardState, setCardState] = useState([false, false]);
+  const [activeIndex ,setActiveIndex] = useState(0);
+  const [data, setData] = useState([]);
   const toggleState = (id) => {
     const newCardState = [...cardState];
     newCardState[id] = !cardState[id];
@@ -24,6 +27,7 @@ function Work() {
         >
           or Software Developer
         </Text>
+        <Timeline activeIndex={activeIndex} data={data}/>
         <Button
           variant={"solid"}
           bg="black"
@@ -120,15 +124,10 @@ function Work() {
                 </Text>
               </Box>
             )}
-          {/* <Box bg="black" width={"490px"} height={"600px"}  borderRadius="1rem">
-          Card 1
-      </Box>
-      <Box bg="black" width={"490px"} height={"600px"}  borderRadius="1rem">
-          Card 1
-      </Box> */}
         </Box>
       </Flex>
       </Box>
+    
     </Layout>
   );
 }
