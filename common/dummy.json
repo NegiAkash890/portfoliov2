@@ -1,0 +1,68 @@
+{
+
+    "section" :[
+        {   "section_name" : "Introduction",
+            "section_title" : "Hi there !" ,
+            "section_summary" :  "Fuelled by a passion for designing compelling products, I have a deep desire to excel and continuously improve in my work. Learn more about my journey below."
+        } , {
+            "section_name": "Worked on",
+            "section_title" : "My career so far" ,
+            "section_summary" : "Currently working on my @skills and looking for opportunities to @learn Always up for new challenges, I have experience working as an developer for growing startups. I have projects from scratch and have driven projects to there successfully completion",
+            "technologies" : ["Html", "Css", "React", "Redux", "Figma"]
+        } , {
+            "section_name": "Impression Made" , 
+            "testimonials" : [
+                {
+                    "pic" : "",
+                    "name" : "Dia Mirza",
+                    "role" : "Software Developer @ Microsoft",
+                    "feedback" : "ebastian is a guru at all things UX design, consistently producing intuitive, modern, and bold designs. He is a natural problem solver in the design space so everyone went to him if they were stuck on a feature or flow. He has a arsenal of design skills including animation and graphic design. Not to mention, Seb was a design team lead, which means he managed a full team of both onshore and offshore designs reviewing and providing feedback on all of their designs... Any business would be lucky to have him."
+                } ,
+                {
+                    "pic" : "",
+                    "name" : "Tej Partap",
+                    "role" : "MTS @ Siemen",
+                    "feedback" : "ebastian is a guru at all things UX design, consistently producing intuitive, modern, and bold designs. He is a natural problem solver in the design space so everyone went to him if they were stuck on a feature or flow. He has a arsenal of design skills including animation and graphic design. Not to mention, Seb was a design team lead, which means he managed a full team of both onshore and offshore designs reviewing and providing feedback on all of their designs... Any business would be lucky to have him."
+                } , {
+                    "pic" : "",
+                    "name" : "Trivendram Pal",
+                    "role" : "Software Developer @ Cadence",
+                    "feedback" : "ebastian is a guru at all things UX design, consistently producing intuitive, modern, and bold designs. He is a natural problem solver in the design space so everyone went to him if they were stuck on a feature or flow. He has a arsenal of design skills including animation and graphic design. Not to mention, Seb was a design team lead, which means he managed a full team of both onshore and offshore designs reviewing and providing feedback on all of their designs... Any business would be lucky to have him."
+                }
+            ]
+        }   
+    ],
+    "blog" : [
+        {
+            "published" : "July 2022" ,
+            "title" : "Blog A", 
+            "slug" : "react-basics",
+            "tags" : ["Javascript"]
+        } , {
+            "published" : "August 2022" ,
+            "title" : "Blog B", 
+            "slug" : "react-basics",
+            "tags" : ["philosphy"]
+        }, {
+            "published" : "September 2022" ,
+            "title" : "Blog C", 
+            "slug" : "react-basics",
+            "tags" : ["motivation"]
+        } , {
+            "published" : "October 2022" ,
+            "title" : "Blog D", 
+            "slug" : "react-basics",
+            "tags" : ["design pattern"]
+        } ,  {
+            "published" : "November 2022" ,
+            "title" : "Blog D", 
+            "slug" : "react-basics",
+            "tags" : ["design pattern"]
+        } ,  {
+            "published" : "December 2022" ,
+            "title" : "Blog D", 
+            "slug" : "react-basics",
+            "tags" : ["design pattern"]
+        }
+    ]
+}

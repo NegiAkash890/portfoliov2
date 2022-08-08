@@ -1,5 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 import {
   Box,
@@ -10,9 +10,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import MobileNav from './MobileNav';
+import MobileNav from "./MobileNav";
 function About(props) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <Box
@@ -29,21 +29,41 @@ function About(props) {
       >
         <Flex justifyContent="space-between" alignItems={"center"}>
           <Box>
-            <Image src="./logo.png" width="140px" height="70px" alt="Logo" />
+            <Image
+              src="./logo.png"
+              width="140px"
+              height="70px"
+              alt="Logo"
+              mt={4}
+            />
           </Box>
           <Box fontWeight="semibold">
-            <Link mr={4} onClick={() => {
-                router.push('/')
-              }}>About</Link>
+            <Link
+              mr={4}
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              About
+            </Link>
             <Button bg="black" color="white">
-              <Link onClick={() => {
-                router.push('/work')
-              }}>Work</Link>
+              <Link
+                onClick={() => {
+                  router.push("/work");
+                }}
+              >
+                Work
+              </Link>
             </Button>
 
-            <Link ml={5} onClick={() => {
-                router.push('/contact')
-              }}>Contact</Link>
+            <Link
+              ml={5}
+              onClick={() => {
+                router.push("/contact");
+              }}
+            >
+              Contact
+            </Link>
           </Box>
         </Flex>
       </Box>

@@ -1,7 +1,7 @@
-
+/* Timeline bar */
 #timeline_status_marker {
   position: relative;
-  margin-top: 10rem;
+  margin-top: 8rem;
   display: block;
   content: "";
   width: 100%;
@@ -9,8 +9,8 @@
   border-radius: 1rem;
 }
 
+/* Style for different milestone */
 #timeline_steps_0 {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,6 +43,7 @@
   background-image: linear-gradient(to right, rgb(220, 14, 83) 0%, rgb(220, 14, 83) 100%,transparent 35%, transparent 100%);
 }
 
+/* Milestone circle */ 
 .timeline_step {
   list-style: none;
   margin-top: -20px;
@@ -56,7 +57,7 @@
   
 }
 
-
+/* Unvisited Milestone */
 .timeline_step_disabled {
   margin-top: -20px;
   content: "";
@@ -71,17 +72,7 @@
  
 }
 
-
-.timeline_step::before{
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  left: 20%;
-  top: -10%;
-  border-radius: 50%;
-}
-
+/* Container for arrow navigation */
 .cd-timeline-navigation {
   width: 100%;
   display: flex;
@@ -93,13 +84,17 @@
   margin-top: 1rem;
 }
 
+
+/* Buttons for navigation */
 .next{
   color: rgb(220, 14, 83) ;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .prev{
   color: rgb(220, 14, 83) ;
   font-size: 2rem;
+  cursor: pointer;
 }
 

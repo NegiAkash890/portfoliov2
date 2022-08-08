@@ -11,12 +11,14 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import React from "react";
-import Blog from "../common/Blog";
+import Blog from "../common/components/Blog";
 import Layout from "../components/layout";
+import dummyData from '../common/dummy.json';
 
 
 function contact() {
   const blogtitle = ['Blog1' , 'Blog2', 'Blog3', 'Blog4', 'Blog5', 'Blog6'];
+  console.log(dummyData);
   return (
     <Layout>
       <Box maxW={1600} mt={40} mx="auto" p={[1,0,0]} display="flex" justifyContent={"center"} flexDir="column" alignItems={"center"}>
@@ -28,8 +30,8 @@ function contact() {
           </Box>
           <Box display={"flex"} flexWrap="wrap" alignItems={"center"} justifyContent={"center"}>
             {
-              blogtitle.map((blog,index) => {
-                  return <Blog key={index} data={blog} date={"July 2022"} category={"JS"}/>
+              dummyData.blog.map((blog,index) => {
+                  return <Blog key={index} title={blog.title} date={blog.published} category={blog.tags}/>
               })
             }
           </Box>

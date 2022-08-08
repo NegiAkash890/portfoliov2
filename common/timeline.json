@@ -1,0 +1,22 @@
+{
+"data" :[{
+    "date" : "Aug-2018",
+    "content": "Cleared senior secondary education and joined NSUT East Campus, to pursue B.Tech in Electronics and Communication Engineering",
+    "highlight": ""
+  },
+  {
+    "date" : "Oct-2021 to March-2022",
+    "content": "Joined DISECTO as an front-end developer intern. During my four month internship I worked on CRM platform landing page and a career portal page. I developed the front-end portion of the career page and completed the work before the deadline.",
+    "highlight": "Added provision for uploading data from CMS for events page & hello bar notification on study abroad platform"
+  },
+  {
+    "date" : "May-2022 to July-2022",
+    "content": "Joined,  upGrad as an SDE Intern. Worked on CMS platform of upGrad study abroad platform & implemented new features and integrated APIs.Added provision for uploading data from CMS for events page & hello bar notification on study abroad platform ",
+    "highlight": "Added provision for uploading data from CMS for events page & hello bar notification on study abroad platform"
+  },
+  {
+    "date" : "July-2022 to Present",
+    "content": "After completion of 3-month internship I was promoted to SDE position. Implementing new features on CMS for the content team & performing bug-fixes on SSR platform as well as cms admin panel.",
+    "highlight": "Implemented  GPA calculator, Couselor feature on study abroad platform"
+  }]
+}

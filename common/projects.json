@@ -1,0 +1,28 @@
+{
+    "data" :[
+      {
+        "title" : "Code Compiler",
+        "content": "Cleared senior secondary education and joined NSUT East Campus, to pursue B.Tech in Electronics and Communication Engineering",
+        "stack" : "HTML, CSS, React",
+        "link":""
+      },
+      {
+        "title" : "Walmart Clone",
+        "content": "Cleared senior secondary education and joined NSUT East Campus, to pursue B.Tech in Electronics and Communication Engineering",
+        "stack" : "HTML, CSS, React",
+        "link":""
+      },
+      {
+        "title" : "Netflix Clone",
+        "content": "Cleared senior secondary education and joined NSUT East Campus, to pursue B.Tech in Electronics and Communication Engineering",
+        "stack" : "HTML, CSS, React",
+        "link":""
+      },
+      {
+        "title" : "Movie Finder",
+        "content": "Cleared senior secondary education and joined NSUT East Campus, to pursue B.Tech in Electronics and Communication Engineering",
+        "stack" : "HTML, CSS, React",
+        "link":""
+      }
+    ]
+    }
