@@ -30,6 +30,8 @@ function About(props) {
         <Flex justifyContent="space-between" alignItems={"center"}>
           <Box>
             <Image
+              cursor={"pointer"}
+              onClick={() => router.push("/")}
               src="./logo.png"
               width="140px"
               height="70px"
