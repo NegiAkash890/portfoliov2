@@ -47,26 +47,26 @@ function Timeline({ activeIndex, data, setActiveIndex }) {
           </ul>
         </div>
       </div>
-      <ul className={styles["cd-timeline-navigation"]}>
-        <li>
+      <ul className={activeIndex === 0 ? styles["flex-end"] :styles["cd-timeline-navigation"]}>
+        {(activeIndex != 0) && <li>
           <a className={styles["prev"]} onClick={() => move("prev")}>
             &lt;
           </a>
-        </li>
-        <li>
+        </li>}
+        {  (activeIndex != data?.length - 1) &&  <li>
           <a className={styles["next"]} onClick={() => move("next")}>
             &gt;
           </a>
-        </li>
+        </li>}
       </ul>
       <div className={styles["events-content"]}>
         <div className={styles["selected"]} data-date="16/01/2014">
-          <em>{data[activeIndex].date}</em>
-          <Text mt={4} fontSize={"1.2rem"} minH="120px">
+          {/* <em>{data[activeIndex].date}</em> */}
+          <Text mt={10} fontSize={"1.2rem"} minH="120px">
             {data[activeIndex].content}
           </Text>
 
-          <Text my={4}>Highlights</Text>
+          <Text my={3}>Highlights</Text>
           <Text>+ {data[activeIndex].highlight}</Text>
         </div>
       </div>
