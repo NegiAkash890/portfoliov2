@@ -40,15 +40,16 @@ function About(props) {
             />
           </Box>
           <Box fontWeight="semibold">
+          <Button style={router.pathname == "/" ? {backgroundColor : "black", color:"white"} : {}}>
             <Link
-              mr={4}
               onClick={() => {
                 router.push("/");
               }}
             >
               About
             </Link>
-            <Button bg="black" color="white">
+           </Button>
+             <Button style={router.pathname == "/work" ? {backgroundColor : "black", color:"white"} : {}}>
               <Link
                 onClick={() => {
                   router.push("/work");
@@ -57,15 +58,17 @@ function About(props) {
                 Work
               </Link>
             </Button>
-
+            <Button style={router.pathname == "/blog" ? {backgroundColor : "black", color:"white"} : {}}>
             <Link
-              ml={5}
+              _activeLink={{bg:"red"}}
               onClick={() => {
-                router.push("/contact");
+                
+                router.push("/blog");
               }}
             >
-              Contact
+              Blogs
             </Link>
+            </Button>
           </Box>
         </Flex>
       </Box>
