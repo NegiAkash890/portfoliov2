@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import styles from "../styles/timeline.module.css";
 function Timeline({ activeIndex, data, setActiveIndex }) {
   const move = (type) => {
-    console.log(activeIndex, type);
     if (activeIndex == data?.length - 1 && type === "next") {
       setActiveIndex(0);
     } else if (activeIndex == 0 && type === "prev") {
