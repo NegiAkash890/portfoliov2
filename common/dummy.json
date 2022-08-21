@@ -41,17 +41,17 @@
         } , {
             "published" : "August 2022" ,
             "title" : "Blog B", 
-            "slug" : "react-basics",
+            "slug" : "react-hooks",
             "tags" : ["philosphy"]
         }, {
             "published" : "September 2022" ,
             "title" : "Blog C", 
-            "slug" : "react-basics",
+            "slug" : "react-redux",
             "tags" : ["motivation"]
         } , {
             "published" : "October 2022" ,
             "title" : "Blog D", 
-            "slug" : "react-basics",
+            "slug" : "react-context",
             "tags" : ["design pattern"]
         } ,  {
             "published" : "November 2022" ,

@@ -1,4 +1,3 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 
 import {
@@ -7,9 +6,8 @@ import {
   Flex,
   Image,
   Link,
-  useDisclosure,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React from "react";
 import MobileNav from "./MobileNav";
 function About(props) {
   const router = useRouter();
@@ -32,7 +30,7 @@ function About(props) {
             <Image
               cursor={"pointer"}
               onClick={() => router.push("/")}
-              src="./logo.png"
+              src="/logo.png"
               width="140px"
               height="70px"
               alt="Logo"
@@ -58,12 +56,12 @@ function About(props) {
                 Work
               </Link>
             </Button>
-            <Button style={router.pathname == "/blog" ? {backgroundColor : "black", color:"white"} : {}}>
+            <Button style={router.pathname == "/blogs" ? {backgroundColor : "black", color:"white"} : {}}>
             <Link
               _activeLink={{bg:"red"}}
               onClick={() => {
                 
-                router.push("/blog");
+                router.push("/blogs");
               }}
             >
               Blogs

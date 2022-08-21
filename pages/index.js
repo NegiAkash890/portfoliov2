@@ -5,7 +5,6 @@ import Layout from '../components/layout'
 export default function Home() {
   return (
     <Layout>
-
     <Box  maxW={1000} my={10} mx="auto">
       <About />
     </Box>
