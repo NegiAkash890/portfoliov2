@@ -1,50 +1,48 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout";
-import { remark } from "remark";
-import html from "remark-html";
-import { getPostData } from "./getPostData";
-import { Octokit } from "@octokit/core";
-function BlogItem({ postData }) {
-  const [data, setData] = useState();
-  async function fetchPostData() {
-    const octokit = new Octokit({
-      auth : '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'
-    })
-    const response=  await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
-      owner: 'NegiAkash890',
-      repo: 'blog',
-      path:"_posts"
-      
-    })
-    setData(response.data[0].git_url.content);
-    console.log(response.data[0].content);
-    console.log(response.data[0].git_url.content);;
-    return response;
-  }
-  
-  useEffect(() => {
-    fetchPostData();
-  }, []) ;
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import SyntaxHighlighter from "react-syntax-highlighter";
+
+function BlogItem({ frontMatter: { title }, mdxSource }) {
+
   return (
     <Layout>
-     
-      <div dangerouslySetInnerHTML={data}></div>
-      
+      <div className="mt-4">
+        <h1>{title}</h1>
+        <MDXRemote {...mdxSource} components={{ SyntaxHighlighter }} />
+      </div>
     </Layout>
   );
 }
 
 export default BlogItem;
 
-// export async function getStaticProps({ params }) {
-//   // Add the "await" keyword like this:
-//   const postData = await getPostData(params.id);
-//   // ...
-// }
+export const getStaticPaths = async () => {
+  const files = fs.readdirSync(path.join("posts"));
+  const paths = files.map((filename) => ({
+    params: {
+      id: filename.replace(".mdx", ""),
+    },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
-// export async function getStaticPaths() {
-//   return {
-//      params: [] ,
-//     fallback: false
-//   }
-// }
+export const getStaticProps = async ({ params: { id } }) => {
+  const markdownWithMeta = fs.readFileSync( path.join("posts", id + ".mdx"),"utf-8");
+  const { data: frontMatter, content } = matter(markdownWithMeta);
+  const mdxSource = await serialize(content);
+  return {
+    props: {
+      frontMatter,
+      id,
+      mdxSource,
+    },
+  };
+};

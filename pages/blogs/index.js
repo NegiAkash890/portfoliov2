@@ -14,6 +14,9 @@ import React from "react";
 import Blog from "../../common/components/Blog";
 import Layout from "../../components/layout";
 import dummyData from '../../common/dummy.json';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 
 function contact() {
@@ -40,3 +43,36 @@ function contact() {
 }
 
 export default contact;
+
+export const getStaticPaths = async () => {
+  console.log(path.join('posts'));
+  const files = fs.readdirSync(path.join('posts'));
+  console.log(files);
+  const paths = files.map(filename => ({
+    params: {
+      id: filename.replace('.mdx', '')
+    }
+  }))
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export const getStaticProps = async () => {
+
+  const files = fs.readdirSync(path.join('posts'))
+  const posts = files.map(filename => {
+    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+    const { data: frontMatter } = matter(markdownWithMeta)
+    return {
+      frontMatter,
+      id: filename.split('.')[0]
+    }
+  })
+  return {
+    props: {
+      posts
+    }
+  }
+}
