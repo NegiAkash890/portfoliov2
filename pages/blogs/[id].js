@@ -5,13 +5,14 @@ import { MDXRemote } from "next-mdx-remote";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import styles from './Blog.module.css';
 import SyntaxHighlighter from "react-syntax-highlighter";
 
 function BlogItem({ frontMatter: { title }, mdxSource }) {
 
   return (
     <Layout>
-      <div className="mt-4">
+      <div className={styles.container}>
         <h1>{title}</h1>
         <MDXRemote {...mdxSource} components={{ SyntaxHighlighter }} />
       </div>

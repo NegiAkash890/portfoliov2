@@ -44,21 +44,6 @@ function contact() {
 
 export default contact;
 
-export const getStaticPaths = async () => {
-  console.log(path.join('posts'));
-  const files = fs.readdirSync(path.join('posts'));
-  console.log(files);
-  const paths = files.map(filename => ({
-    params: {
-      id: filename.replace('.mdx', '')
-    }
-  }))
-  return {
-    paths,
-    fallback: false
-  }
-}
-
 export const getStaticProps = async () => {
 
   const files = fs.readdirSync(path.join('posts'))

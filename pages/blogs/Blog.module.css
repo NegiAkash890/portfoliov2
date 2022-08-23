@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    margin: 3rem auto;
+    padding: 4rem;
+}
+
+.container h1, .container h2, .container h3 , .container h4 {
+    margin-top: 1.5rem;
+}
+.container h1 {
+    font-size: 3rem;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+}
+
+.container h3 {
+    font-size: 2rem;
+}
+
+.container h4 {
+    font-size: 1.5rem;
+}
+
+.container p {
+    font-size: 1.2rem;
+}
+
+.container .tags {
+    display: flex;
+    background-color: black;
+}
+
+.container ul, .container ol {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+
+.inner-section {
+    margin-left: 0.8rem;
+}
+
