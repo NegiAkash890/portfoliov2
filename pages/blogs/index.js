@@ -20,7 +20,6 @@ import matter from 'gray-matter';
 
 
 function contact() {
-  const blogtitle = ['Blog1' , 'Blog2', 'Blog3', 'Blog4', 'Blog5', 'Blog6'];
   return (
     <Layout>
       <Box maxW={1600} mt={40} mx="auto" p={[1,0,0]} display="flex" justifyContent={"center"} flexDir="column" alignItems={"center"}>

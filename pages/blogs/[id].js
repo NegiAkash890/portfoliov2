@@ -6,15 +6,22 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import styles from './Blog.module.css';
+import {Button, Image }from "@chakra-ui/react";
 import SyntaxHighlighter from "react-syntax-highlighter";
+import { Flex, Tag } from "@chakra-ui/react";
 
-function BlogItem({ frontMatter: { title }, mdxSource }) {
-
+function BlogItem({ frontMatter, mdxSource }) {
+  const { tags , thumbnailUrl, title} = frontMatter ;
   return (
     <Layout>
       <div className={styles.container}>
-        <h1>{title}</h1>
-        <MDXRemote {...mdxSource} components={{ SyntaxHighlighter }} />
+        <Image src={thumbnailUrl} alt={title} />
+        <h1>{frontMatter.title}</h1>
+        <Flex gap={"4"} mb={"4"}>
+            {tags.map((tag,index) => ( <Tag key={index} variant='solid' bg={"black"}>{tag}</Tag> ))}
+        </Flex>
+       
+        <MDXRemote {...mdxSource} components={{ SyntaxHighlighter, Button }} />
       </div>
     </Layout>
   );

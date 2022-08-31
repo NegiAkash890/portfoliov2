@@ -1,9 +1,13 @@
 .container {
     width: 100%;
+    max-width: 1200px;
     margin: 3rem auto;
-    padding: 4rem;
+    padding: 3rem;
 }
-
+.btn-grp{
+    background-color: aquamarine;
+    width: 200px;
+}
 .container h1, .container h2, .container h3 , .container h4 {
     margin-top: 1.5rem;
 }

@@ -35,34 +35,29 @@
     "blog" : [
         {
             "published" : "July 2022" ,
-            "title" : "Blog A", 
+            "title" : "Lifecycle Methods", 
             "slug" : "react-basics",
-            "tags" : ["Javascript"]
+            "tags" : ["React"]
         } , {
             "published" : "August 2022" ,
-            "title" : "Blog B", 
+            "title" : "Hooks", 
             "slug" : "react-hooks",
-            "tags" : ["philosphy"]
+            "tags" : ["React"]
         }, {
             "published" : "September 2022" ,
-            "title" : "Blog C", 
-            "slug" : "react-redux",
-            "tags" : ["motivation"]
-        } , {
+            "title" : "Creational Pattern", 
+            "slug" : "design-pattern-creational",
+            "tags" : ["javascript"]
+        } ,  {
             "published" : "October 2022" ,
-            "title" : "Blog D", 
-            "slug" : "react-context",
-            "tags" : ["design pattern"]
+            "title" : "Structural Pattern", 
+            "slug" : "design-pattern-structural",
+            "tags" : ["javascript"]
         } ,  {
-            "published" : "November 2022" ,
-            "title" : "Blog D", 
-            "slug" : "react-basics",
-            "tags" : ["design pattern"]
-        } ,  {
-            "published" : "December 2022" ,
-            "title" : "Blog D", 
-            "slug" : "react-basics",
-            "tags" : ["design pattern"]
-        }
+            "published" : "October 2022" ,
+            "title" : "Behavioural Pattern", 
+            "slug" : "design-pattern-behavioural",
+            "tags" : ["javascript"]
+        } 
     ]
 }
