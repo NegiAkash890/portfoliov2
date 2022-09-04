@@ -9,11 +9,15 @@ import styles from './Blog.module.css';
 import {Button, Image }from "@chakra-ui/react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { Flex, Tag } from "@chakra-ui/react";
+import Head from "next/head";
 
 function BlogItem({ frontMatter, mdxSource }) {
   const { tags , thumbnailUrl, title} = frontMatter ;
   return (
     <Layout>
+      <Head>
+          <title>{title}</title>
+      </Head>
       <div className={styles.container}>
         <Image src={thumbnailUrl} alt={title} />
         <h1>{frontMatter.title}</h1>

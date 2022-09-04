@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Timeline from "../components/timeline";
 import timeLineData from '../common/timeline.json'
 import projectData from '../common/projects.json';
+import Head from "next/head";
 
 function Work() {
   const [cardState, setCardState] = useState([false, false, false, false]);
@@ -17,6 +18,9 @@ function Work() {
   };
   return (
     <Layout>
+      <Head>
+          <title>Work Experience</title>
+      </Head>
       <Box maxW={1000} my={40} mx="auto" p={[3, 0, 0]}>
         <Heading fontSize={["3rem", "5rem", "5rem"]} fontWeight="medium">
           A student passionate about creating and experimenting with front-end
@@ -28,7 +32,7 @@ function Work() {
           fontWeight="light"
           color={"grey"}
         >
-          or Software Developer
+          and a Software Engineer
         </Text>
         <Timeline activeIndex={activeIndex} data={timeLineData?.data} setActiveIndex={setActiveIndex}/>
         <Heading

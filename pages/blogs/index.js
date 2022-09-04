@@ -17,12 +17,17 @@ import dummyData from '../../common/dummy.json';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import Head from "next/head";
 
 
 function contact() {
   return (
     <Layout>
+      <Head>
+          <title>Blogs Page</title>
+      </Head>
       <Box maxW={1600} mt={40} mx="auto" p={[1,0,0]} display="flex" justifyContent={"center"} flexDir="column" alignItems={"center"}>
+          <Image src="/journal.png" alt="Blog Page Icon"/>
           <Heading mb={4} fontSize={"3rem"}>Journal</Heading>
           <Box>
             <Text fontSize={["1rem", "1.5rem", "1.5rem"]} fontWeight="light" display={"block"} width="100%">
