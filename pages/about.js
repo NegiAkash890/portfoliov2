@@ -7,11 +7,27 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
+import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons"
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import dummyData from '../common/dummy.json';
 
 function about() {
   const info = dummyData.section;
+  const customIconHover = {
+    color: "black"
+  }
+  const sliderSettings = {
+    infinite: false,
+    dots: true,
+    autoplay: false,
+    prevArrow: <ChevronLeftIcon  w={10} h={10} _hover={customIconHover} />,
+    nextArrow: <ChevronRightIcon  w={10} h={10} _hover={customIconHover} sx={{'.slick-disabled' : {color: "transparent"}}} />,
+    
+  }
   return (
     <>
      
@@ -74,40 +90,46 @@ function about() {
           </Box>
         </Box>
       </Box>
-      <Box  
-        alignItems="center"
-        p={["4","4","10"]}
-        justifyContent="center"
-        maxW={1000}
+      <Box
         my={["10","10","50"]}
-        mx="auto"
-        width={"100%"}>
+      >
         <Heading mb={4}>{info[2][`section_name`]}</Heading>
-        <Box gap={10} mt={10} display={{sm: "block", base:"block", md:"flex"}} alignItems="center" justifyContent="center" wrap={"wrap"}>
-        <Box mt={10} minW="300"  display={{sm: "flex", base:"flex", md:"block"}}>
-          <Image src="https://fakeimg.pl/150x150/" borderRadius={"100px"} alt="fallback-image"/>
-          <Box ml={3} mt={4} lineHeight="1.5">
-            <Text fontWeight="medium" fontSize="1.5rem">
-              Dia Mirza
-            </Text>
-            <Text fontWeight={"thin"} fontSize={["0.8rem","1rem","1rem"]}>
-              Software Developer @ Microsoft
-            </Text>
+        <Slider
+          {...sliderSettings}
+        >
+          
+          {info[2].testimonials.map(testimonial => (
+            <Box 
+            key={testimonial.name}
+            alignItems="center"
+            p={["4","4","10"]}
+            justifyContent="center"
+            maxW={1000}
+            
+            mx="auto"
+            width={"100%"}>
+            
+            <Box gap={10}  display={{sm: "block", base:"block", md:"flex"}} alignItems="center" justifyContent="center" wrap={"wrap"}>
+            <Box mt={10} minW="300"  display={{sm: "flex", base:"flex", md:"block"}}>
+              <Image src={testimonial.pic} borderRadius={"100px"} alt="fallback-image"/>
+              <Box ml={3} mt={4} lineHeight="1.5">
+                <Text fontWeight="medium" fontSize="1.5rem">
+                  {testimonial.name}
+                </Text>
+                <Text fontWeight={"thin"} fontSize={["0.8rem","1rem","1rem"]}>
+                  {testimonial.role}
+                </Text>
+              </Box>
+            </Box>
+            <Box>
+              <Text mt={["10","0","0"]} fontSize={["0.8rem","1rem","1rem"]}>
+                {testimonial.feedback}
+              </Text>
+            </Box>
+            </Box>
           </Box>
-        </Box>
-        <Box>
-          <Text mt={["10","0","0"]} fontSize={["0.8rem","1rem","1rem"]}>
-            Akash is a very skilled at all things UX design, consistently producing
-            intuitive, modern, and bold designs. He is a natural problem solver
-            in the design space so everyone went to him if they were stuck on a
-            feature or flow. He has a arsenal of design skills including
-            animation and graphic design. Not to mention, Seb was a design team
-            lead, which means he managed a full team of both onshore and
-            offshore designs reviewing and providing feedback on all of their
-            designs... Any business would be lucky to have him.
-          </Text>
-        </Box>
-        </Box>
+          ))}
+        </Slider>
       </Box>
       <Button mr={["2","0","0"]} float={'right'} variant={'outline'} bg='black' color={'white'} px={10} py={5} borderRadius='none' mb={10}>Work</Button>
     </>
