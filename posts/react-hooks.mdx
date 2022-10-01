@@ -6,4 +6,46 @@ thumbnailUrl: '/images/blog.jpg'
 tags: ['react', 'basics']
 ---
 
-Work in Progress
+React Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+
+### 1) useState Hook
+
+useState to create state variables. The useState hook allows us to create state variables in a React function component.
+
+State allows us to access and update certain values in our components over time
+
+When we create a state variable, we must provide it a default value (which can be any data type).
+
+We get that state variable as the first value in an array, which we can destructure and declare with const.
+
+const [value, setValue] =useState(0)
+
+for using the state we use 'value' in our component and for updating the state we use setValue() 
+
+
+### 2) useEffect Hook
+
+useEffect to perform side effects, useEffect lets us perform side effects in function components.
+
+Side effects are when we need to reach into the outside world. For example API calls, or working with the DOM.
+
+useEffect accepts a callback function (called the 'effect' function), as a first argument which will by default run every time the component re-renders and second argument as dependency array,
+
+useEffect lets us conditionally perform effects with the dependencies array. If any one of the values in the array changes, the useEffect function runs again.
+
+If no values are included in the dependencies array, useEffect will only run on component mount and unmount.
+
+#### Unsubscribe by Returning a Function
+
+useEffect lets us unsubscribe from listeners that we might have created by returning a function at the end.
+
+
+### 3) useRef Hook
+
+useRef is used to reference react elements.
+
+Refs are a special attribute that are available on all React components. They allow us to create a reference to a given element / component when the component mounts.
+
+useRef allows us to easily use React refs. They are helpful (as in the example below) when we want to directly interact with an element, such as to clear its value or focus it, as with an input.
+
+We call useRef (at the top of a component) and attach the returned value to the element's ref attribute to refer to it.
