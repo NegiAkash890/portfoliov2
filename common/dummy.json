@@ -8,7 +8,7 @@
             "section_name": "Worked on",
             "section_title" : "My career so far" ,
             "section_summary" : "Currently working on my @skills and looking for opportunities to @learn Always up for new challenges, I have experience working as an developer for growing startups. I have projects from scratch and have driven projects to there successfully completion",
-            "technologies" : ["Html", "Css","Javascipt", "React", "Redux", "Figma", "Nextjs" ," Saga","Bootstrap","Nodejs","Expressjs","Git","Firebase"]        } , {
+            "technologies" : ["Html", "Css","Javascript", "React", "Redux", "Figma", "NextJs" ,"Saga", "Bootstrap", "Nodejs", "ExpressJs", "Git", "Firebase"]} , {
             "section_name": "Impression Made" , 
             "testimonials" : [
                 {
