@@ -88,23 +88,16 @@ function about() {
           <Image src="https://fakeimg.pl/150x150/" borderRadius={"100px"} alt="fallback-image"/>
           <Box ml={3} mt={4} lineHeight="1.5">
             <Text fontWeight="medium" fontSize="1.5rem">
-              Dia Mirza
+              Akshit kumar
             </Text>
             <Text fontWeight={"thin"} fontSize={["0.8rem","1rem","1rem"]}>
-              Software Developer @ Microsoft
+              Software Developer @ upGrad
             </Text>
           </Box>
         </Box>
         <Box>
           <Text mt={["10","0","0"]} fontSize={["0.8rem","1rem","1rem"]}>
-            Akash is a very skilled at all things UX design, consistently producing
-            intuitive, modern, and bold designs. He is a natural problem solver
-            in the design space so everyone went to him if they were stuck on a
-            feature or flow. He has a arsenal of design skills including
-            animation and graphic design. Not to mention, Seb was a design team
-            lead, which means he managed a full team of both onshore and
-            offshore designs reviewing and providing feedback on all of their
-            designs... Any business would be lucky to have him.
+          Akash is a well good in logical thinking and comes with a very unique and easy to write solution, and very supportive, giving helping hand to others.
           </Text>
         </Box>
         </Box>
