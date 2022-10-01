@@ -58,7 +58,7 @@ function about() {
                  info[1].technologies.map((tech, index) => {
                  return  (<Badge
                    key={index}
-                  w={20}
+                  w={24}
                   textAlign="center"
                   p={2}
                   variant="outline" 
